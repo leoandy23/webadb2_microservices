@@ -18,8 +18,9 @@ import { firstValueFrom } from 'rxjs';
 @Controller()
 export class GatewayController {
   // DECLARAR URLS DE LOS SERVICIOS
-  private readonly URL_AUTH_SERVICE =
-    'http://auth-service-production-b371.up.railway.app';
+  // private readonly URL_AUTH_SERVICE =
+  //   'http://auth-service-production-b371.up.railway.app';
+  private readonly URL_AUTH_SERVICE = 'http://localhost:3001';
   private readonly URL_USER_SERVICE =
     'http://user-service-production-b8a7.up.railway.app';
   private readonly URL_PROJECT_SERVICE =

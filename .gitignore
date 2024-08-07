@@ -1,4 +1,5 @@
 # Compiled output
+/api-gateway/dist
 /dist
 /build
 /node_modules
