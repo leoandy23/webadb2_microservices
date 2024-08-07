@@ -1,0 +1,142 @@
+# Compiled output
+/dist
+/build
+/node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+lerna-debug.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+/coverage
+/.nyc_output
+
+# IDEs and editors
+/.idea
+/.project
+/.classpath
+.c9/
+/*.launch
+/.settings/
+/*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Environment variable files
+*.env
+*.env.development.local
+*.env.test.local
+*.env.production.local
+*.env.local
+
+# Temporary directories
+/temp
+/tmp
+/.temp
+/.tmp
+
+# Runtime data
+/pids
+*.pid
+*.seed
+*.pid.lock
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Debugger logs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# NPM cache directory
+.npm
+
+# Package dependency directories
+.bower_components
+.jspm_packages
+/.pnp
+.pnp.js
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Static site builds
+.next
+/out
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm/
+
+# Optional eslint cache
+.eslintcache
+
+# Output of 'npm pack'
+*.tgz
+
+# Output of 'yarn build'
+.yarn/build
+
+# Optional REPL history
+.node_repl_history
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# TurboRepo cache
+/.turbo
+
+# Dependency directories and files
+node_modules/
+yarn.lock
+pnpm-lock.yaml
+package-lock.json
+
+# Local and debug files
+*.local
+*.log
+*.debug
+
+# Webpack output
+/webpack-stats.json
+/.cache
+
+# Azure Pipelines
+AzurePipelines/ 
+
+# Firebase
+firebase-debug.log
+
+# Storybook
+.storybook/
+.storybook-static/
+__snapshots__/
+
+# ESLint and Prettier
+.prettierignore
+eslint-debug.log
+
+# Miscellaneous
+*.swp
+*.swo
