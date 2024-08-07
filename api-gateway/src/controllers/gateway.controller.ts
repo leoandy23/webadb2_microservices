@@ -19,23 +19,37 @@ import { firstValueFrom } from 'rxjs';
 export class GatewayController {
   // DECLARAR URLS DE LOS SERVICIOS
   private readonly URL_AUTH_SERVICE =
-    'http://auth-service-production-b371.up.railway.app';
+    'https://auth-service-production-b371.up.railway.app';
   private readonly URL_USER_SERVICE =
-    'http://user-service-production-b8a7.up.railway.app';
+    'https://user-service-production-b8a7.up.railway.app';
   private readonly URL_PROJECT_SERVICE =
-    'http://project-service-production.up.railway.app';
+    'https://project-service-production.up.railway.app';
   private readonly URL_TASK_SERVICE =
-    'http://task-service-production-376b.up.railway.app';
+    'https://task-service-production-376b.up.railway.app';
+
+  // private readonly URL_AUTH_SERVICE = 'http://localhost:3001';
+  // private readonly URL_USER_SERVICE = 'http://localhost:3002';
+  // private readonly URL_PROJECT_SERVICE = 'http://localhost:3003';
+  // private readonly URL_TASK_SERVICE = 'http://localhost:3004';
 
   constructor(private readonly httpService: HttpService) {}
 
   // AUTH CONTROLLER ENDPOINTS
   @Post('auth/login')
   async login(@Body() body) {
-    const response = await firstValueFrom(
-      this.httpService.post(`${this.URL_AUTH_SERVICE}/auth/login`, body),
-    );
-    return response.data;
+    try {
+      const response = await firstValueFrom(
+        this.httpService.post(`${this.URL_AUTH_SERVICE}/auth/login`, body),
+      );
+      return response.data;
+    } catch (error) {
+      // Maneja el error aquí
+      console.error('Error en login:', error.response?.data || error.message);
+      throw new HttpException(
+        'Error al conectar con el servicio de autenticación',
+        HttpStatus.INTERNAL_SERVER_ERROR,
+      );
+    }
   }
 
   @Post('auth/register')

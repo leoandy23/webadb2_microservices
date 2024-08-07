@@ -8,17 +8,9 @@ async function bootstrap() {
   app.enableCors({
     origin: '*',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true, // Si necesitas enviar cookies o headers de autenticación
+    credentials: false,
   });
 
-  app.useGlobalPipes(
-    new ValidationPipe({
-      transform: true,
-      whitelist: true,
-      forbidNonWhitelisted: true,
-    }),
-  );
-
-  await app.listen(3000); // Puerto para el API Gateway
+  await app.listen(3000);
 }
 bootstrap();
