@@ -18,7 +18,8 @@ import { firstValueFrom } from 'rxjs';
 @Controller()
 export class GatewayController {
   // DECLARAR URLS DE LOS SERVICIOS
-  private readonly URL_AUTH_SERVICE = 'http://localhost:3001';
+  private readonly URL_AUTH_SERVICE =
+    'http://webadb2microservices-production.up.railway.app';
   private readonly URL_USER_SERVICE = 'http://localhost:3002';
   private readonly URL_PROJECT_SERVICE = 'http://localhost:3003';
   private readonly URL_TASK_SERVICE = 'http://localhost:3004';
