@@ -19,10 +19,13 @@ import { firstValueFrom } from 'rxjs';
 export class GatewayController {
   // DECLARAR URLS DE LOS SERVICIOS
   private readonly URL_AUTH_SERVICE =
-    'http://webadb2microservices-production.up.railway.app';
-  private readonly URL_USER_SERVICE = 'http://localhost:3002';
-  private readonly URL_PROJECT_SERVICE = 'http://localhost:3003';
-  private readonly URL_TASK_SERVICE = 'http://localhost:3004';
+    'auth-service-production-b371.up.railway.app';
+  private readonly URL_USER_SERVICE =
+    'http://user-service-production-b8a7.up.railway.app';
+  private readonly URL_PROJECT_SERVICE =
+    'http://project-service-production.up.railway.app';
+  private readonly URL_TASK_SERVICE =
+    'http://task-service-production-376b.up.railway.app';
 
   constructor(private readonly httpService: HttpService) {}
 
